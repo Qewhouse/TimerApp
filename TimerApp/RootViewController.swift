@@ -18,7 +18,13 @@ final class RootViewController: UIViewController {
     
     private let timerLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .blue
+        label.layer.cornerRadius = 10
+        label.layer.borderColor = UIColor.black.cgColor
+        label.layer.borderWidth = 2
+        label.textAlignment = .center
+        label.backgroundColor = .orange
+        label.clipsToBounds = true
         label.text = "00:00"
         label.font = .boldSystemFont(ofSize: 30)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -27,7 +33,12 @@ final class RootViewController: UIViewController {
     
     private let startResetButton: UIButton = {
         let button = UIButton()
-        button.tintColor = .black
+//        button.tintColor = .black
+        button.setTitleColor(.black, for: .normal)
+        button.layer.cornerRadius = 10
+        button.layer.borderWidth = 2
+        button.backgroundColor = .yellow
+        button.layer.borderColor = UIColor.black.cgColor
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(startResetActionTapped), for: .touchUpInside)
         return button
@@ -36,7 +47,12 @@ final class RootViewController: UIViewController {
     private let pauseButton: UIButton = {
         let button = UIButton()
         button.setTitle("Pause", for: .normal)
-        button.tintColor = .black
+        button.setTitleColor(.black, for: .normal)
+//        button.tintColor = .black
+        button.layer.cornerRadius = 10
+        button.layer.borderWidth = 2
+        button.backgroundColor = .yellow
+        button.layer.borderColor = UIColor.black.cgColor
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(pauseActionTapped), for: .touchUpInside)
         return button
@@ -157,14 +173,17 @@ extension RootViewController {
             timerLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             timerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             timerLabel.heightAnchor.constraint(equalToConstant: 50),
+            timerLabel.widthAnchor.constraint(equalToConstant: 250),
             
             startResetButton.topAnchor.constraint(equalTo: timerLabel.bottomAnchor, constant: 50),
             startResetButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             startResetButton.heightAnchor.constraint(equalToConstant: 40),
+            startResetButton.widthAnchor.constraint(equalToConstant: 150),
             
             pauseButton.topAnchor.constraint(equalTo: startResetButton.bottomAnchor, constant: 30),
             pauseButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            pauseButton.heightAnchor.constraint(equalToConstant: 40)
+            pauseButton.heightAnchor.constraint(equalToConstant: 40),
+            pauseButton.widthAnchor.constraint(equalToConstant: 150),
         ])
     }
 }
