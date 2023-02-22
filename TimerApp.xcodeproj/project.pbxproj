@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		378057C929A684D900A3CA8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378057C829A684D900A3CA8A /* AppDelegate.swift */; };
 		378057CB29A684D900A3CA8A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378057CA29A684D900A3CA8A /* RootViewController.swift */; };
-		378057CD29A684D900A3CA8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378057CC29A684D900A3CA8A /* ContentView.swift */; };
 		378057CF29A684DA00A3CA8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378057CE29A684DA00A3CA8A /* Assets.xcassets */; };
 		378057D229A684DA00A3CA8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378057D029A684DA00A3CA8A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		378057C529A684D900A3CA8A /* TimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		378057C829A684D900A3CA8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		378057CA29A684D900A3CA8A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		378057CC29A684D900A3CA8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		378057CE29A684DA00A3CA8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		378057D129A684DA00A3CA8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,7 +53,6 @@
 			children = (
 				378057C829A684D900A3CA8A /* AppDelegate.swift */,
 				378057CA29A684D900A3CA8A /* RootViewController.swift */,
-				378057CC29A684D900A3CA8A /* ContentView.swift */,
 				378057CE29A684DA00A3CA8A /* Assets.xcassets */,
 				378057D029A684DA00A3CA8A /* LaunchScreen.storyboard */,
 			);
@@ -134,7 +131,6 @@
 			files = (
 				378057CB29A684D900A3CA8A /* RootViewController.swift in Sources */,
 				378057C929A684D900A3CA8A /* AppDelegate.swift in Sources */,
-				378057CD29A684D900A3CA8A /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
