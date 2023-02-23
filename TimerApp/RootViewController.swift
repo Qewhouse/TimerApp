@@ -33,7 +33,6 @@ final class RootViewController: UIViewController {
     
     private let startResetButton: UIButton = {
         let button = UIButton()
-//        button.tintColor = .black
         button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 10
         button.layer.borderWidth = 2
@@ -48,7 +47,6 @@ final class RootViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Pause", for: .normal)
         button.setTitleColor(.black, for: .normal)
-//        button.tintColor = .black
         button.layer.cornerRadius = 10
         button.layer.borderWidth = 2
         button.backgroundColor = .yellow
