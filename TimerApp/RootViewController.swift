@@ -25,7 +25,7 @@ final class RootViewController: UIViewController {
         label.textAlignment = .center
         label.backgroundColor = .orange
         label.clipsToBounds = true
-        label.text = "00:00"
+        label.text = "00:00:00"
         label.font = .boldSystemFont(ofSize: 30)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -39,7 +39,7 @@ final class RootViewController: UIViewController {
         button.backgroundColor = .yellow
         button.layer.borderColor = UIColor.black.cgColor
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(startResetActionTapped), for: .touchUpInside)
+       
         return button
     }()
     
@@ -52,7 +52,7 @@ final class RootViewController: UIViewController {
         button.backgroundColor = .yellow
         button.layer.borderColor = UIColor.black.cgColor
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(pauseActionTapped), for: .touchUpInside)
+        
         return button
     }()
     
@@ -64,6 +64,7 @@ final class RootViewController: UIViewController {
         view.addSubview(pauseButton)
         setConstraints()
         updateButtonsUI()
+        buttonsTargets()
         
     }
     
@@ -72,6 +73,10 @@ final class RootViewController: UIViewController {
         setupObservers()
     }
     
+    private func buttonsTargets() {
+        startResetButton.addTarget(self, action: #selector(startResetActionTapped), for: .touchUpInside)
+        pauseButton.addTarget(self, action: #selector(pauseActionTapped), for: .touchUpInside)
+    }
     private func setupObservers() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(changeAppState),
@@ -90,9 +95,11 @@ final class RootViewController: UIViewController {
     }
     
     private func updateTimerText() {
+        
         let minutes = counter / 60
         let seconds = counter % 60
-        timerLabel.text = String(format: "%02d:%02d", minutes, seconds)
+        let hour = minutes / 60
+        timerLabel.text = String(format: "%02d:%02d:%02d", hour, minutes, seconds)
     }
     
     @objc private func startResetActionTapped() {
